@@ -1,7 +1,10 @@
 # MobileGame Launchpad
- 모바일 게임 실행 관리 프로그램
+모바일 게임 실행 관리 프로그램
 
 PC에서 모바일게임 실행시 따로 실행할 필요 없이 관리기 내에서 관리할수 있도록 만든 프로그램입니다.
+
+다운로드 링크 
+https://github.com/chsportfor/MobileGameLaunchpad/releases/download/v1.0/MobileGameLaunchpad.exe
 
 ## 기능 설명
 1. 프로그램 추가
@@ -19,3 +22,6 @@ PC에서 모바일게임 실행시 따로 실행할 필요 없이 관리기 내�
 - 좌측의 체크를 통해 체크 시 동시 실행될 게임 선택 가능함
 - 체크한 게임 전체 실행 버튼 클릭시 체크된 게임은 동시 실행됨
 - 따로 실행하고 싶을 경우 우측의 실행 버튼 이용  
+
+## 주의 사항 
+프로그램 생성시 게임리스트 관리를 위한 custom_programs.json 파일이 생성됩니다. 같은 폴더에 넣어주세요.
