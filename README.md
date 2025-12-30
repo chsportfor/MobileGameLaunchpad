@@ -9,7 +9,7 @@ https://github.com/chsportfor/MobileGameLaunchpad/releases/download/v1.0/MobileG
 ## 기능 설명
 1. 프로그램 추가
 - 상단 좌측 버튼을 이용해 추가 가능함
-- 경로 설정은 해당 게임의 exe 파일 경로로 지정
+- 경로 설정은 해당 게임의 exe 파일 경로로 지정 (실행기가 아닌 게임 exe로 지정 추천)
 - Steam 게임의 경우 해당 게임의 App ID를 입력하여 지정 (Store 진입시 링크에 있는 번호)
 - 관리자 권한이 필요한 게임의 경우 관리자 권한 메시지 끄기 체크 시 메시지 뜨지 않음
 
