@@ -1,29 +1,46 @@
-# MobileGame Launchpad
-모바일 게임 실행 관리 프로그램
+# MobileGameLauncher
 
-PC에서 모바일게임 실행시 따로 실행할 필요 없이 관리기 내에서 관리할수 있도록 만든 프로그램입니다.
+PC 게임과 Steam 게임을 한곳에서 등록하고 실행하는 Windows 데스크톱 런처입니다.
 
-다운로드 링크 
-https://github.com/chsportfor/MobileGameLaunchpad/releases/download/v1.0/MobileGameLaunchpad.exe
+## 기능
 
-## 기능 설명
-1. 프로그램 추가
-- 상단 좌측 버튼을 이용해 추가 가능함
-- 경로 설정은 해당 게임의 exe 파일 경로로 지정 (실행기가 아닌 게임 exe로 지정 추천)
-- Steam 게임의 경우 해당 게임의 App ID를 입력하여 지정 (Store 진입시 링크에 있는 번호)
-- 관리자 권한이 필요한 게임의 경우 관리자 권한 메시지 끄기 체크 시 메시지 뜨지 않음
+- 하나의 등록 창에서 PC 게임과 Steam 게임 추가
+- Steam 상점 링크, 게임 ID, Steam 바로가기 인식
+- 게임 검색 및 개별 실행
+- 체크한 게임 한 번에 실행
+- 게임별 설정 수정 및 등록 삭제
+- Windows 작업 스케줄러를 이용한 관리자 실행 설정
+- 기존 등록된 관리자 실행 작업의 실행 경로 조회
 
-2. 프로그램 삭제
-- 상단 우측 버튼을 이용해 리스트에서 게임 삭제 가능
-- 삭제할 항목 우측에 있는 X 버튼 클릭
+관리자 실행 설정은 Windows 권한 정책을 변경하지 않습니다. 빌드한 실행 파일은 실행 시 관리자 권한을 요청합니다.
 
-3. 체크 및 체크한 게임 전체 실행
-- 리스트 등록시 게임 리스트에 해당 게임이 추가됨
-- 좌측의 체크를 통해 체크 시 동시 실행될 게임 선택 가능함
-- 체크한 게임 전체 실행 버튼 클릭시 체크된 게임은 동시 실행됨
-- 따로 실행하고 싶을 경우 우측의 실행 버튼 이용  
+## 개발 환경
 
-## 주의 사항 
-- 프로그램 생성시 게임리스트 관리를 위한 custom_programs.json 파일이 생성됩니다. 같은 폴더에 넣어주세요.
-- 일부 게임의 경우 exe 지정시 계정 인증이 없어 실행이 안될 수 있습니다. ex) 니케
-해당 게임의 경우 실행기를 등록해주세요. 
+- Windows
+- Python 3.14
+
+```powershell
+py -3.14 -m pip install -r requirements.txt
+py -3.14 MobileGamePlayOnce.py
+```
+
+처음 실행할 때 게임 목록은 비어 있습니다. 게임 등록 시 실행 파일 옆에 `custom_programs.json`이 생성됩니다. 이 파일에는 개인 게임 경로와 Windows 작업 이름이 저장되므로 Git에서 제외합니다. 빈 설정 예시는 `custom_programs.example.json`입니다.
+
+## 실행 파일 빌드
+
+앱을 종료하고 `build.bat`를 실행하세요. 같은 폴더에 `MobileGameLaunchpad.exe`가 생성되며, 중간 빌드 파일은 Windows 임시 폴더에 저장됩니다.
+
+빌드한 실행 파일은 Python을 설치하지 않은 Windows PC에서도 실행할 수 있습니다. 게임 및 Steam은 해당 PC에 별도로 설치되어 있어야 합니다.
+
+## 파일 구성
+
+| 파일 | 용도 |
+| --- | --- |
+| `MobileGamePlayOnce.py` | 앱 소스 |
+| `MobileGamePlayOnce.spec` | PyInstaller 빌드 설정 |
+| `requirements.txt` | Python 의존성 |
+| `build.bat` | 실행 파일 빌드 |
+| `icon.ico` | 앱 아이콘 |
+| `사용안내.md` | 사용 방법 |
+
+실행 파일과 개인 설정은 저장소에 포함하지 않습니다.

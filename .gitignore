@@ -1,0 +1,20 @@
+# Local game paths and Windows task names
+custom_programs.json
+custom_programs.json.tmp
+
+# Generated executables and build artifacts
+*.exe
+__pycache__/
+*.py[cod]
+build/
+dist/
+preview/
+backup-*/
+.venv/
+venv/
+
+# Local editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
