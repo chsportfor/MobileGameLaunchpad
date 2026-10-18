@@ -2,6 +2,12 @@
 
 PC 게임과 Steam 게임을 한곳에서 등록하고 실행하는 Windows 데스크톱 런처입니다.
 
+## 다운로드 및 실행
+
+[최신 Release에서 MobileGameLaunchpad.exe 다운로드](https://github.com/chsportfor/MobileGameLaunchpad/releases/latest/download/MobileGameLaunchpad.exe)
+
+별도 설치 없이 다운로드한 EXE를 실행하세요. Python 설치는 필요하지 않습니다. 설정을 저장할 수 있는 폴더에 두고 사용하면 됩니다. 처음에는 빈 게임 목록으로 시작하며, 게임을 등록하면 같은 폴더에 개인 설정이 저장됩니다.
+
 ## 기능
 
 - 하나의 등록 창에서 PC 게임과 Steam 게임 추가
@@ -43,4 +49,4 @@ py -3.14 MobileGamePlayOnce.py
 | `icon.ico` | 앱 아이콘 |
 | `사용안내.md` | 사용 방법 |
 
-실행 파일과 개인 설정은 저장소에 포함하지 않습니다.
+실행 파일은 GitHub Releases에서 배포합니다. 개인 설정은 저장소에 포함하지 않습니다.
